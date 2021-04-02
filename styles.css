@@ -1,0 +1,40 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: monospace;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background: rgb(163, 163, 163);
+}
+
+#quiz {
+    display: block;
+    position: relative;
+    height: 50%;
+    width: 70%;
+    padding: 20px;
+    background: white;
+    border-radius: 30px 5px;
+    border: 2px solid rgba(0, 0, 0, 0.445);
+}
+
+#quiz #quiz-header {
+    font-size: 2rem;
+}
+
+#quiz .choices {
+    background: rgb(224, 224, 224);
+    padding: 1%;
+    margin: 1%;
+    font-size: 1.2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#quiz #choicesList h4 {
+    overflow: hidden;
+}
