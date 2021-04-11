@@ -1,4 +1,25 @@
+function myFunction() {
+    var start = document.getElementById('start');
+    var start = document.getElementById("quiz");
+    if (start.style.display === "none") {
+        start.style.display = "block";
+    } else {
+        start.style.display = "none";
+    }
+}
 (function() {
+    var count = 60;
+    var interval = setInterval(function() {
+        document.getElementById('count').innerHTML = count;
+        count--;
+        if (count === 0) {
+            clearInterval(interval);
+            document.getElementById('count').innerHTML = 'Done';
+            // or...
+            alert("You're out of time!");
+        }
+    }, 1000)
+
     function buildQuiz() {
         const output = [];
         myQuestions.forEach(

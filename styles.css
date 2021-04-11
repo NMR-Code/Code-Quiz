@@ -11,16 +11,22 @@
         margin: auto;
     }
     
+    #count {
+        font-size: 3rem;
+        margin: auto;
+    }
+    
     #quiz {
-        background: rgba(0, 0, 0, 0.089);
-        border-radius: 5px;
+        display: none;
+        border-radius: 20px;
         max-width: 80%;
         margin: auto;
     }
     
     .question {
-        padding-left: 10px;
+        padding: 10px;
         font-weight: 550;
+        border-radius: 0px;
     }
     
     .answers {
@@ -29,11 +35,13 @@
     
     .answers label {
         display: block;
+        background: rgb(255, 188, 188);
     }
     
     .submit {
         max-width: 300px;
         margin: auto;
+        display: none;
     }
     
     #submit {
