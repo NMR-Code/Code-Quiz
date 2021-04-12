@@ -1,12 +1,4 @@
-function myFunction() {
-    var start = document.getElementById('start');
-    var start = document.getElementById("quiz");
-    if (start.style.display === "none") {
-        start.style.display = "block";
-    } else {
-        start.style.display = "none";
-    }
-}
+alert("Would you like to test you programming knowledge?");
 (function() {
     var count = 60;
     var interval = setInterval(function() {
@@ -61,6 +53,33 @@ function myFunction() {
 
         resultsContainer.innerHTML = `You got ${numCorrect} out of ${myQuestions.length} correct!`;
     }
+
+    function showSlide(n) {
+        slides[currentSlide].classList.remove('active-slide');
+        slides[n].classList.add('active-slide');
+        currentSlide = n;
+        if (currentSlide === 0) {
+            previousButton.style.display = 'none';
+        } else {
+            previousButton.style.display = 'inline-block';
+        }
+        if (currentSlide === slides.length - 1) {
+            nextButton.style.display = 'none';
+            submitButton.style.display = 'inline-block';
+        } else {
+            nextButton.style.display = 'inline-block';
+            submitButton.style.display = 'none';
+        }
+    }
+
+    function showNextSlide() {
+        showSlide(currentSlide + 1);
+    }
+
+    function showPreviousSlide() {
+        showSlide(currentSlide - 1);
+    }
+
 
     const quizContainer = document.getElementById('quiz');
     const resultsContainer = document.getElementById('results');
@@ -167,5 +186,6 @@ function myFunction() {
 
     // Generate Quiz
     buildQuiz();
+
     submitButton.addEventListener('click', showResults);
 })();
