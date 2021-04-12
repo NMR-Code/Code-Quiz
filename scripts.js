@@ -7,7 +7,6 @@ alert("Would you like to test you programming knowledge?");
         if (count === 0) {
             clearInterval(interval);
             document.getElementById('count').innerHTML = 'Done';
-            // or...
             alert("You're out of time!");
         }
     }, 1000)
